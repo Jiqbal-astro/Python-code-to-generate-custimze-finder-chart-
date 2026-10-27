@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "finderchart"
+version = "2.0.0"
+description = "Finder charts from sky surveys or your own FITS images, with correct WCS orientation, camera fields and Gaia comparison stars."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Javed Iqbal" }]
+requires-python = ">=3.9"
+dependencies = ["numpy>=1.22", "matplotlib>=3.5", "astropy>=5.0", "astroquery>=0.4.6"]
+
+[project.scripts]
+finderchart = "finderchart.cli:main"
+
+[tool.setuptools]
+packages = ["finderchart"]
